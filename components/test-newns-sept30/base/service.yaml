@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: test-newns-sept30
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-newns-sept30 
+  name: test-newns-sept30
+spec:
+  ports:
+  - port: 8501
+    protocol: TCP
+    targetPort: 8501
+  selector:
+    app.kubernetes.io/instance: test-newns-sept30 
